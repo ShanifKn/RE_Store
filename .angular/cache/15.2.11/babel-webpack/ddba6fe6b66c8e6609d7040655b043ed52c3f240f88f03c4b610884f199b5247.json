@@ -1,0 +1,1 @@
+{"ast":null,"code":"// NGRX\nimport { routerReducer } from '@ngrx/router-store';\nexport const appReducers = {\n  router: routerReducer\n};\nexport const metaReducers = [];","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -1,7 +1,7 @@
 {
   "name": "demo28",
   "version": "1.0.0",
-  "homepage": "https://d-themes.com/angular/molla/demo28",
+  "homepage": "https://d-themes.com/angular/re-store/demo28",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -66,6 +66,7 @@
     "@types/googlemaps": "^3.39.14",
     "@types/jasmine": "3.10.2",
     "@types/node": "16.11.7",
+    "autoprefixer": "^10.4.20",
     "codelyzer": "^6.0.2",
     "jasmine-core": "3.10.1",
     "jasmine-spec-reporter": "~7.0.0",
@@ -74,7 +75,9 @@
     "karma-coverage": "2.0.3",
     "karma-jasmine": "4.0.1",
     "karma-jasmine-html-reporter": "1.7.0",
+    "postcss": "^8.4.49",
     "protractor": "~7.0.0",
+    "tailwindcss": "^3.4.17",
     "ts-node": "~10.4.0",
     "tslint": "~6.1.0",
     "typescript": "4.9.5"

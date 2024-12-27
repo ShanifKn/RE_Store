@@ -1,0 +1,69 @@
+<div class="bg-white border-b border-gray-200">
+  <div class="container mx-auto relative">
+    <!-- Navbar -->
+    <nav class="flex space-x-4 text-xl font-medium text-gray-600 py-4">
+      <a
+        href="#"
+        class="hover:text-blue-500"
+        (mouseenter)="onHover({ title: 'All Categories' })"
+        (mouseleave)="resetHover()"
+      >
+        All Categories
+      </a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-blue-500">Fresh Food</a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-blue-500">Grocery</a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-blue-500">Grocery Non Food</a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-blue-500">Housewares</a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-blue-500">Stationary</a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-blue-500">Electronics</a>
+    </nav>
+
+    <!-- Dropdown Grid Section -->
+    <div
+      class="absolute left-0 top-full bg-white shadow-lg w-full z-50"
+      *ngIf="hoveredSubCategories"
+      (mouseleave)="resetHover()"
+    >
+      <div class="grid grid-cols-12 h-full">
+        <!-- Category List -->
+        <div class="col-span-3 bg-gray-100 h-full">
+          <div
+            class="border-b border-gray-500 border-dashed px-5 py-3 cursor-pointer"
+            *ngFor="let category of categories"
+            (mouseenter)="onHover(category)"
+          >
+            <h1 class="text-black text-base font-medium">
+              {{ category.title }}
+            </h1>
+          </div>
+        </div>
+
+        <!-- Subcategories -->
+        <div class="col-span-9 px-6 py-4 grid grid-cols-3 gap-5 pb-7">
+          <div
+            class="flex flex-col gap-1"
+            *ngFor="let subCat of hoveredSubCategories"
+          >
+            <h1 class="text-black font-semibold text-lg">
+              {{ subCat.title }}
+            </h1>
+            <div
+              class="flex flex-col gap-1"
+              *ngFor="let sub of subCat.subCategory"
+            >
+              <h1 class="text-gray-400 text-base cursor-pointer font-medium">
+                {{ sub.title }}
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

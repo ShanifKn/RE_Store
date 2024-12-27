@@ -1,21 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
-@Component( {
-	selector: 'molla-video-modal',
-	templateUrl: './video-modal.component.html',
-	styleUrls: [ './video-modal.component.scss' ]
-} )
-
+@Component({
+  selector: 're-store-video-modal',
+  templateUrl: './video-modal.component.html',
+  styleUrls: ['./video-modal.component.scss'],
+})
 export class VideoModalComponent implements OnInit {
+  constructor(private modalService: NgbActiveModal) {}
 
-	constructor ( private modalService: NgbActiveModal ) {
-	}
+  ngOnInit(): void {}
 
-	ngOnInit (): void {
-	}
-
-	closeModal () {
-		this.modalService.dismiss();
-	}
+  closeModal() {
+    this.modalService.dismiss();
+  }
 }

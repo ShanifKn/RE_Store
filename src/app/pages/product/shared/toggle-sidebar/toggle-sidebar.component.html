@@ -1,4 +1,5 @@
-<div [ngClass]="toggleState ? 'sidebar-filter right sidebar-product' : 'sidebar sidebar-product'">
+<div
+    [ngClass]="toggleState ? 'sidebar-filter right sidebar-product' : 'sidebar sidebar-product'">
     <div [ngClass]="toggleState ? 'sidebar-filter-wrapper product-sidebar-wrapper' : ''">
         <related-products-two [products]="products"></related-products-two>
 
@@ -7,7 +8,8 @@
 
             <div class="banner-sidebar text-left banner-overlay ml-0">
                 <a routerLink="/shop/sidebar/4cols" class="w-100">
-                    <molla-image src="assets/images/blog/sidebar/banner.jpg" alt="banner"></molla-image>
+                    <re-store-image src="assets/images/blog/sidebar/banner.jpg"
+                        alt="banner"></re-store-image>
                 </a>
 
                 <div class="banner-content text-left pt-0">
@@ -15,7 +17,8 @@
                     <h3 class="banner-subtitle text-uppercase">Spring Sale</h3>
                     <h2 class="banner-title">Up to 60% off<br />from $55</h2>
                     <a routerLink="/shop/sidebar/3cols"
-                        class="btn btn-outline btn-md btn-outline-white text-uppercase m-0">Shop Now</a>
+                        class="btn btn-outline btn-md btn-outline-white text-uppercase m-0">Shop
+                        Now</a>
                 </div>
             </div>
         </div>

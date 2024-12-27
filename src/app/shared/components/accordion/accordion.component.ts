@@ -1,18 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-@Component( {
-	selector: 'molla-accordion',
-	templateUrl: './accordion.component.html',
-	styleUrls: [ './accordion.component.scss' ]
-} )
-
+@Component({
+  selector: 're-store-accordion',
+  templateUrl: './accordion.component.html',
+  styleUrls: ['./accordion.component.scss'],
+})
 export class AccordionComponent implements OnInit {
+  @Input() accordionID: string;
+  @Input() adClass: string;
 
-	@Input() accordionID: string;
-	@Input() adClass: string;
+  constructor() {}
 
-	constructor () { }
-
-	ngOnInit (): void {
-	}
+  ngOnInit(): void {}
 }

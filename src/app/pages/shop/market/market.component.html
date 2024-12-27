@@ -1,5 +1,5 @@
 <div class="main shop-market">
-    <molla-page-header title="Shop Market" subtitle="Shop"></molla-page-header>
+    <re-store-page-header title="Shop Market" subtitle="Shop"></re-store-page-header>
 
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
         <div class="container">
@@ -22,33 +22,45 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 col-xl-4-5col">
-                    <owl-carousel carouselClasses="category-banners-slider owl-simple owl-nav-inside"
+                    <owl-carousel
+                        carouselClasses="category-banners-slider owl-simple owl-nav-inside"
                         [options]="introSlider">
                         <div class="banner banner-poster bg-gray">
                             <a href="javascript:;">
-                                <img src="assets/images/market/slider/slider-1.jpg" alt="Banner">
+                                <img src="assets/images/market/slider/slider-1.jpg"
+                                    alt="Banner">
                             </a>
 
                             <div class="banner-content banner-content-right">
-                                <h3 class="banner-subtitle"><a routerLink="/shop/sidebar/list">Amazing Value</a>
+                                <h3 class="banner-subtitle"><a
+                                        routerLink="/shop/sidebar/list">Amazing Value</a>
                                 </h3>
-                                <h2 class="banner-title"><a routerLink="/shop/sidebar/list">High Performance 4K
+                                <h2 class="banner-title"><a
+                                        routerLink="/shop/sidebar/list">High Performance
+                                        4K
                                         TVs</a></h2>
-                                <a routerLink="/shop/sidebar/list" class="banner-link">Shop Now <i
+                                <a routerLink="/shop/sidebar/list"
+                                    class="banner-link">Shop Now <i
                                         class="icon-long-arrow-right"></i></a>
                             </div>
                         </div>
 
                         <div class="banner banner-poster bg-gray">
                             <a routerLink="/shop/sidebar/list">
-                                <img src="assets/images/market/slider/slider-2.jpg" alt="Banner">
+                                <img src="assets/images/market/slider/slider-2.jpg"
+                                    alt="Banner">
                             </a>
 
                             <div class="banner-content">
-                                <h3 class="banner-subtitle"><a routerLink="/shop/sidebar/list">Weekend Deal</a></h3>
-                                <h2 class="banner-title"><a routerLink="/shop/sidebar/list">Apple & Accessories</a>
+                                <h3 class="banner-subtitle"><a
+                                        routerLink="/shop/sidebar/list">Weekend Deal</a>
+                                </h3>
+                                <h2 class="banner-title"><a
+                                        routerLink="/shop/sidebar/list">Apple &
+                                        Accessories</a>
                                 </h2>
-                                <a routerLink="/shop/sidebar/list" class="banner-link">Shop Now <i
+                                <a routerLink="/shop/sidebar/list"
+                                    class="banner-link">Shop Now <i
                                         class="icon-long-arrow-right"></i></a>
                             </div>
                         </div>
@@ -56,7 +68,9 @@
 
                     <div class="mb-3"></div>
 
-                    <owl-carousel carouselClasses="owl-simple owl-nav-align brand-carousel" [options]="brandSlider">
+                    <owl-carousel
+                        carouselClasses="owl-simple owl-nav-align brand-carousel"
+                        [options]="brandSlider">
                         <a href="javascript:;" class="brand" *ngFor="let brand of brands">
                             <img [src]="brand" alt="Brand Name">
                         </a>
@@ -67,7 +81,9 @@
                     <div class="cat-blocks-container">
                         <div class="row">
                             <div class="col-6 col-md-4 col-lg-3" *ngFor="let cat of cats">
-                                <a routerLink="/shop/market" [queryParams]="{category: cat.query}" class="cat-block">
+                                <a routerLink="/shop/market"
+                                    [queryParams]="{category: cat.query}"
+                                    class="cat-block">
                                     <figure>
                                         <span>
                                             <img [src]="cat.image" alt="desc">
@@ -86,7 +102,8 @@
                         <div class="toolbox-left">
                             <div class="toolbox-info">
                                 Showing
-                                <span>{{ products.length }} of {{ totalCount }}</span> Products
+                                <span>{{ products.length }} of {{ totalCount }}</span>
+                                Products
                             </div>
                         </div>
 
@@ -95,7 +112,8 @@
                                 <label for="sortby">Sort by:</label>
                                 <div class="select-custom">
                                     <select name="sortby" id="sortby" class="form-control"
-                                        (change)="changeOrderBy($event)" [value]="orderBy">
+                                        (change)="changeOrderBy($event)"
+                                        [value]="orderBy">
                                         <option value="default">Default</option>
                                         <option value="featured">Most Popular</option>
                                         <option value="rating">Most Rated</option>
@@ -106,13 +124,16 @@
                         </div>
                     </div>
 
-                    <molla-shop-list-two [products]="products" [loaded]="loaded"></molla-shop-list-two>
+                    <re-store-shop-list-two [products]="products"
+                        [loaded]="loaded"></re-store-shop-list-two>
 
-                    <molla-pagination [perPage]="perPage" [total]="totalCount" *ngIf="totalCount > perPage">
-                    </molla-pagination>
+                    <re-store-pagination [perPage]="perPage" [total]="totalCount"
+                        *ngIf="totalCount > perPage">
+                    </re-store-pagination>
                 </div>
 
-                <aside class="col-lg-3 col-xl-5col skel-shop-sidebar order-lg-first skeleton-body"
+                <aside
+                    class="col-lg-3 col-xl-5col skel-shop-sidebar order-lg-first skeleton-body"
                     [class.loaded]="firstLoad">
                     <div *ngIf="!firstLoad else sidebarLoaded">
                         <div class="skel-widget"></div>
@@ -121,10 +142,11 @@
                         <div class="skel-widget"></div>
                     </div>
                     <ng-template #sidebarLoaded>
-                        <molla-shop-sidebar-three [toggle]="toggle">
-                        </molla-shop-sidebar-three>
+                        <re-store-shop-sidebar-three [toggle]="toggle">
+                        </re-store-shop-sidebar-three>
 
-                        <button class="sidebar-fixed-toggler" (click)="toggleSidebar()" *ngIf="toggle">
+                        <button class="sidebar-fixed-toggler" (click)="toggleSidebar()"
+                            *ngIf="toggle">
                             <i class="icon-cog"></i>
                         </button>
 

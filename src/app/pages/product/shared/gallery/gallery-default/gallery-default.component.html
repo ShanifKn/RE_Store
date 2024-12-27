@@ -4,10 +4,11 @@
             <span class="product-label label-new" *ngIf="product.new">New</span>
             <span class="product-label label-sale" *ngIf="product.sale_price">Sale</span>
             <span class="product-label label-top" *ngIf="product.top">Top</span>
-            <span class="product-label label-out" *ngIf="!product.stock || product.stock == 0">Out Of Stock</span>
+            <span class="product-label label-out"
+                *ngIf="!product.stock || product.stock == 0">Out Of Stock</span>
 
-            <molla-image class="d-block position-relative"
-                [src]="SERVER_URL + product.pictures[currentIndex].url"></molla-image>
+            <re-store-image class="d-block position-relative"
+                [src]="SERVER_URL + product.pictures[currentIndex].url"></re-store-image>
 
             <a href="javascript:;" class="btn-product-gallery" (click)="openLightBox()">
                 <i class="icon-arrows"></i>
@@ -15,10 +16,12 @@
         </figure>
 
         <div id="product-zoom-gallery" class="product-image-gallery">
-            <a [ngClass]="'product-gallery-item' + ( i === currentIndex ? ' active' : '' )" href="#"
-                (click)="changeImage( $event, i )" *ngFor="let item of product.pictures; let i = index;">
-                <molla-image [src]="SERVER_URL + product.sm_pictures[i].url" alt="Product side" class="product-image">
-                </molla-image>
+            <a [ngClass]="'product-gallery-item' + ( i === currentIndex ? ' active' : '' )"
+                href="#" (click)="changeImage( $event, i )"
+                *ngFor="let item of product.pictures; let i = index;">
+                <re-store-image [src]="SERVER_URL + product.sm_pictures[i].url"
+                    alt="Product side" class="product-image">
+                </re-store-image>
             </a>
         </div>
     </div>

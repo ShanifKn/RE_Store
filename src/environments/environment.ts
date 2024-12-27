@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   demo: 'demo28',
-  SERVER_URL: 'https://d-themes.com/angular/molla/server'
+  SERVER_URL: '',
 };
 
 /*

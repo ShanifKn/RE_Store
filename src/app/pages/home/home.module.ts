@@ -12,20 +12,13 @@ import { BlogCollectionComponent } from './blog-collection/blog-collection.compo
 import { RecommendCollectionComponent } from './recommend-collection/recommend-collection.component';
 
 @NgModule({
-	declarations: [
-		IndexComponent,
-		TrendyCollectionComponent,
-		BlogCollectionComponent,
-		RecommendCollectionComponent
-	],
+  declarations: [
+    IndexComponent,
+    TrendyCollectionComponent,
+    BlogCollectionComponent,
+    RecommendCollectionComponent,
+  ],
 
-	imports: [
-		CommonModule,
-		RouterModule,
-		NgbModule,
-		OwlModule,
-		SharedModule
-	]
+  imports: [CommonModule, RouterModule, NgbModule, OwlModule, SharedModule],
 })
-
-export class HomeModule { }
+export class HomeModule {}

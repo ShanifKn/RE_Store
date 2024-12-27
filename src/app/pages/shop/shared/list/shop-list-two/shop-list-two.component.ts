@@ -1,19 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-	selector: 'molla-shop-list-two',
-	templateUrl: './shop-list-two.component.html',
-	styleUrls: ['./shop-list-two.component.scss']
+  selector: 're-store-shop-list-two',
+  templateUrl: './shop-list-two.component.html',
+  styleUrls: ['./shop-list-two.component.scss'],
 })
-
 export class ShopListTwoComponent implements OnInit {
+  @Input() products = [];
+  @Input() loaded = false;
 
-	@Input() products = [];
-	@Input() loaded = false;
+  constructor() {}
 
-	constructor() {
-	}
-
-	ngOnInit(): void {
-	}
+  ngOnInit(): void {}
 }

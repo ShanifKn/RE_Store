@@ -18,7 +18,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "molla",
+      "prefix": "re-store",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -29,11 +29,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/.htaccess"
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/.htaccess"],
             "styles": [
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/fonts-molla.min.css",
@@ -108,13 +104,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/assets/css/bootstrap.min.css",
-              "src/assets/css/fonts-molla.min.css",
+              "src/assets/css/fonts-re-store.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -128,9 +121,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OwlModule } from 'angular-owl-carousel';
@@ -73,121 +73,123 @@ import { PostOneComponent } from './components/blog-post/post-one/post-one.compo
 import { PostTwoComponent } from './components/blog-post/post-two/post-two.component';
 import { PostThreeComponent } from './components/blog-post/post-three/post-three.component';
 import { PostFourComponent } from './components/blog-post/post-four/post-four.component';
+import { HomeModule } from '../pages/home/home.module';
+import { MegaMenuComponent } from '../pages/home/mega-menu/mega-menu.component';
 
 @NgModule({
-    declarations: [
-        // header
-        CartMenuComponent,
-        CompareMenuComponent,
-        WishlistMenuComponent,
-        CategoryMenuComponent,
-        MainMenuComponent,
-        HeaderSearchComponent,
-        MobileButtonComponent,
-        MobileMenuComponent,
-        HeaderComponent,
-        FooterComponent,
-        // product
-        ProductOneComponent,
-        ProductTwoComponent,
-        ProductThreeComponent,
-        ProductFourComponent,
-        ProductFiveComponent,
-        ProductSixComponent,
-        ProductSevenComponent,
-        ProductEightComponent,
-        ProductNineComponent,
-        ProductTenComponent,
-        ProductElevenComponent,
-        ProductTwelveComponent,
-        ProductThirteenComponent,
-        // single-use components
-        BreadcrumbComponent,
-        PageHeaderComponent,
-        QuickViewComponent,
-        QuickViewTwoComponent,
-        NewsletterModalComponent,
-        LoginModalComponent,
-        VideoModalComponent,
-        QuantityInputComponent,
-        CountDownComponent,
-        AccordionComponent,
-        CardComponent,
-        PaginationComponent,
-        IsotopeGridComponent,
-        ImageComponent,
-        // directives
-        BgParallaxDirective,
-        TabClickDirective,
-        ProductHoverDirective,
-        ContentAnimDirective,
-        // pipes
-        CatFilterPipe,
-        AttrFilterPipe,
-        SafeContentPipe,
-        CountDownComponent,
-        // // blog-post
-        PostOneComponent,
-        PostTwoComponent,
-        PostThreeComponent,
-        PostFourComponent,
-        CountToComponent
-    ],
-    imports: [
-        CommonModule,
-        RouterModule,
-        NgbModule,
-        TranslateModule,
-        OwlModule,
-        LazyLoadImageModule,
-    ],
-    exports: [
-        // header
-        HeaderComponent,
-        // mobile-menus
-        MobileMenuComponent,
-        // footer
-        FooterComponent,
-        // products
-        ProductOneComponent,
-        ProductTwoComponent,
-        ProductThreeComponent,
-        ProductFourComponent,
-        ProductFiveComponent,
-        ProductSixComponent,
-        ProductSevenComponent,
-        ProductEightComponent,
-        ProductNineComponent,
-        ProductTenComponent,
-        ProductElevenComponent,
-        ProductTwelveComponent,
-        ProductThirteenComponent,
-        // // single-use components
-        BreadcrumbComponent,
-        PageHeaderComponent,
-        CountDownComponent,
-        CountToComponent,
-        AccordionComponent,
-        CardComponent,
-        PaginationComponent,
-        QuantityInputComponent,
-        IsotopeGridComponent,
-        ImageComponent,
-        // directives
-        BgParallaxDirective,
-        TabClickDirective,
-        ProductHoverDirective,
-        ContentAnimDirective,
-        // pipes
-        CatFilterPipe,
-        AttrFilterPipe,
-        SafeContentPipe,
-        // // blog-post
-        PostOneComponent,
-        PostTwoComponent,
-        PostThreeComponent,
-        PostFourComponent,
-    ]
+  declarations: [
+    // header
+    CartMenuComponent,
+    CompareMenuComponent,
+    WishlistMenuComponent,
+    CategoryMenuComponent,
+    MainMenuComponent,
+    HeaderSearchComponent,
+    MobileButtonComponent,
+    MobileMenuComponent,
+    HeaderComponent,
+    FooterComponent,
+    // product
+    ProductOneComponent,
+    ProductTwoComponent,
+    ProductThreeComponent,
+    ProductFourComponent,
+    ProductFiveComponent,
+    ProductSixComponent,
+    ProductSevenComponent,
+    ProductEightComponent,
+    ProductNineComponent,
+    ProductTenComponent,
+    ProductElevenComponent,
+    ProductTwelveComponent,
+    ProductThirteenComponent,
+    // single-use components
+    BreadcrumbComponent,
+    PageHeaderComponent,
+    QuickViewComponent,
+    QuickViewTwoComponent,
+    NewsletterModalComponent,
+    LoginModalComponent,
+    VideoModalComponent,
+    QuantityInputComponent,
+    CountDownComponent,
+    AccordionComponent,
+    CardComponent,
+    PaginationComponent,
+    IsotopeGridComponent,
+    ImageComponent,
+    // directives
+    BgParallaxDirective,
+    TabClickDirective,
+    ProductHoverDirective,
+    ContentAnimDirective,
+    // pipes
+    CatFilterPipe,
+    AttrFilterPipe,
+    SafeContentPipe,
+    CountDownComponent,
+    // // blog-post
+    PostOneComponent,
+    PostTwoComponent,
+    PostThreeComponent,
+    PostFourComponent,
+    CountToComponent,
+  ],
+  imports: [
+    CommonModule,
+    RouterModule,
+    NgbModule,
+    TranslateModule,
+    OwlModule,
+    LazyLoadImageModule,
+    MegaMenuComponent,
+  ],
+  exports: [
+    // header
+    HeaderComponent,
+    // mobile-menus
+    MobileMenuComponent,
+    // footer
+    FooterComponent,
+    // products
+    ProductOneComponent,
+    ProductTwoComponent,
+    ProductThreeComponent,
+    ProductFourComponent,
+    ProductFiveComponent,
+    ProductSixComponent,
+    ProductSevenComponent,
+    ProductEightComponent,
+    ProductNineComponent,
+    ProductTenComponent,
+    ProductElevenComponent,
+    ProductTwelveComponent,
+    ProductThirteenComponent,
+    // // single-use components
+    BreadcrumbComponent,
+    PageHeaderComponent,
+    CountDownComponent,
+    CountToComponent,
+    AccordionComponent,
+    CardComponent,
+    PaginationComponent,
+    QuantityInputComponent,
+    IsotopeGridComponent,
+    ImageComponent,
+    // directives
+    BgParallaxDirective,
+    TabClickDirective,
+    ProductHoverDirective,
+    ContentAnimDirective,
+    // pipes
+    CatFilterPipe,
+    AttrFilterPipe,
+    SafeContentPipe,
+    // // blog-post
+    PostOneComponent,
+    PostTwoComponent,
+    PostThreeComponent,
+    PostFourComponent,
+  ],
 })
-
-export class SharedModule { }
+export class SharedModule {}

@@ -1,5 +1,6 @@
 <div class="main">
-    <molla-page-header [title]="'Accordions'" [subtitle]="'Elements'"></molla-page-header>
+    <re-store-page-header [title]="'Accordions'"
+        [subtitle]="'Elements'"></re-store-page-header>
 
     <nav class="breadcrumb-nav">
         <div class="container">
@@ -20,16 +21,20 @@
                 <h2 class="title mb-3">{{ accordionGroup.title }}</h2>
 
                 <div class="row">
-                    <div class="col-md-6" *ngFor="let accordion of accordionGroup.items; let j = index">
-                        <molla-accordion [adClass]="accordion.adClass" [accordionID]="'accordion' + ( 1 + j + i * 2 )">
-                            <molla-card *ngFor="let card of accordion.cards; let isFirst = first"
+                    <div class="col-md-6"
+                        *ngFor="let accordion of accordionGroup.items; let j = index">
+                        <re-store-accordion [adClass]="accordion.adClass"
+                            [accordionID]="'accordion' + ( 1 + j + i * 2 )">
+                            <re-store-card
+                                *ngFor="let card of accordion.cards; let isFirst = first"
                                 [adClass]="accordion.cardAclass" [title]="card.title"
-                                [parent]="'accordion' + ( 1 + j + i * 2 )" [icon]="accordion.showIcon? card.icon : null"
+                                [parent]="'accordion' + ( 1 + j + i * 2 )"
+                                [icon]="accordion.showIcon? card.icon : null"
                                 [show]="isFirst ? true : false">
 
                                 {{ card.body }}
-                            </molla-card>
-                        </molla-accordion>
+                            </re-store-card>
+                        </re-store-accordion>
                     </div>
                 </div>
 

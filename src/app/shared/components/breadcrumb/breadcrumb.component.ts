@@ -5,23 +5,19 @@ import { Product } from '../../classes/product';
 import { environment } from 'src/environments/environment';
 
 @Component({
-	selector: 'molla-breadcrumb',
-	templateUrl: './breadcrumb.component.html',
-	styleUrls: ['./breadcrumb.component.scss']
+  selector: 're-store-breadcrumb',
+  templateUrl: './breadcrumb.component.html',
+  styleUrls: ['./breadcrumb.component.scss'],
 })
-
 export class BreadcrumbComponent implements OnInit {
+  @Input() prev: Product;
+  @Input() next: Product;
+  @Input() current: string;
+  @Input() fullWidth = false;
 
-	@Input() prev: Product;
-	@Input() next: Product;
-	@Input() current: string;
-	@Input() fullWidth = false;
+  SERVER_URL = environment.SERVER_URL;
 
-	SERVER_URL = environment.SERVER_URL;
+  constructor() {}
 
-	constructor() {
-	}
-
-	ngOnInit(): void {
-	}
+  ngOnInit(): void {}
 }

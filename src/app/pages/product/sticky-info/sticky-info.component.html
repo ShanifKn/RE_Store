@@ -1,6 +1,6 @@
 <main class="main">
-    <molla-breadcrumb current="StickyInfo" [prev]="prev" [next]="next">
-    </molla-breadcrumb>
+    <re-store-breadcrumb current="StickyInfo" [prev]="prev" [next]="next">
+    </re-store-breadcrumb>
 
     <div class="page-content">
         <div class="container skeleton-body">
@@ -8,7 +8,8 @@
                 <div class="row skel-pro-single sticky" [class.loaded]="loaded">
                     <div class="col-md-6">
                         <div class="skel-product-gallery"></div>
-                        <product-gallery-sticky [product]="product" *ngIf="loaded"></product-gallery-sticky>
+                        <product-gallery-sticky [product]="product"
+                            *ngIf="loaded"></product-gallery-sticky>
                     </div>
 
                     <div class="col-md-6">
@@ -22,18 +23,22 @@
                                 </div>
                             </div>
 
-                            <product-detail-one [product]="product" *ngIf="loaded"></product-detail-one>
+                            <product-detail-one [product]="product"
+                                *ngIf="loaded"></product-detail-one>
 
-                            <div class="skel-pro-tabs" *ngIf="!loaded else infoBlock"></div>
+                            <div class="skel-pro-tabs" *ngIf="!loaded else infoBlock">
+                            </div>
                             <ng-template #infoBlock>
-                                <product-info-three [product]="product"></product-info-three>
+                                <product-info-three
+                                    [product]="product"></product-info-three>
                             </ng-template>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <related-products-one [products]="related" [loaded]="loaded"></related-products-one>
+            <related-products-one [products]="related"
+                [loaded]="loaded"></related-products-one>
         </div>
     </div>
 </main>

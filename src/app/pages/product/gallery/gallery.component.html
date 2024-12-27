@@ -1,6 +1,6 @@
 <main class="main">
-    <molla-breadcrumb current="Extended" [prev]="prev" [next]="next">
-    </molla-breadcrumb>
+    <re-store-breadcrumb current="Extended" [prev]="prev" [next]="next">
+    </re-store-breadcrumb>
 
     <div class="page-content">
         <div class="container skeleton-body">
@@ -18,7 +18,8 @@
                                 <div class="col-md-6">
                                     <div class="entry-summary row mt-2">
                                         <div class="col-md-12">
-                                            <div class="entry-summary1 mt-2 mt-md-0"></div>
+                                            <div class="entry-summary1 mt-2 mt-md-0">
+                                            </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="entry-summary2"></div>
@@ -29,7 +30,8 @@
                                 <div class="col-md-6">
                                     <div class="entry-summary row mt-2">
                                         <div class="col-md-12">
-                                            <div class="entry-summary1 mt-2 mt-md-0"></div>
+                                            <div class="entry-summary1 mt-2 mt-md-0">
+                                            </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="entry-summary2"></div>
@@ -41,7 +43,8 @@
                     </div>
                 </div>
 
-                <product-detail-three [product]="product" *ngIf="loaded"></product-detail-three>
+                <product-detail-three [product]="product"
+                    *ngIf="loaded"></product-detail-three>
             </div>
 
             <div class="skel-pro-tabs" *ngIf="!loaded else infoBlock"></div>
@@ -49,7 +52,8 @@
                 <product-info-one [product]="product"></product-info-one>
             </ng-template>
 
-            <related-products-one [products]="related" [loaded]="loaded"></related-products-one>
+            <related-products-one [products]="related"
+                [loaded]="loaded"></related-products-one>
         </div>
     </div>
 </main>

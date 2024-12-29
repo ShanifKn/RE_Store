@@ -19,12 +19,12 @@ export interface Product {
 	pictures?: Array<{
 		width?: number;
 		height?: number;
-		url: number;
+		url: string;
 	}>;
 	sm_pictures?: Array<{
 		width?: number;
 		height?: number;
-		url?: number;
+		url?: string;
 	}>
 	variants?: Array<{
 		color?: string;

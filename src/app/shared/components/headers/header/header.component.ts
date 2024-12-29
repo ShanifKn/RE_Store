@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { UtilsService } from 'src/app/shared/services/utils.service';
 import { ModalService } from 'src/app/shared/services/modal.service';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 're-store-header',
@@ -18,7 +19,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     public activeRoute: ActivatedRoute,
     public utilsService: UtilsService,
-    public modalService: ModalService
+    public modalService: ModalService,
+    public cartService: CartService 
   ) {}
 
   ngOnInit(): void {}

@@ -81,7 +81,7 @@
 
     <div class="product-details-action">
         <a href="javascript:;" class="btn-product btn-cart"
-            [class.btn-disabled]="!cartService.canAddToCart( product, qty ) || ( product.variants.length > 0 && !( selectedVariant.color && selectedVariant.size != '' ) )"
+            [class.btn-disabled]="!cartService.canAddToCart( product, qty )"
             (click)="addCart( $event, 0 )"><span>add to cart</span></a>
 
         <div class="details-action-wrapper">

@@ -14,6 +14,14 @@ export class ShopSidebarOneComponent implements OnInit {
   params = {};
   priceRange: any = [0, 100];
 
+  isCollapsed = {
+    sizes: true,
+    colors: true,
+    brands: true,
+    categories: true,
+    prices: true,
+  };
+
   @ViewChild('priceSlider') priceSlider: any;
 
   constructor(public activeRoute: ActivatedRoute, public router: Router) {

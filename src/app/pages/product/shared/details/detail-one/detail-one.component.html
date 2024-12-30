@@ -15,7 +15,7 @@
     </div>
 
     <ng-template #elseBlock>
-        <div class="product-price" *ngIf="minPrice == maxPrice else elseBlock">${{
+        <div class="product-price" *ngIf="minPrice == maxPrice else elseBlock">AED{{
             minPrice.toFixed(2) }}</div>
         <ng-template #elseBlock>
             <div class="product-price"
@@ -25,7 +25,7 @@
             </div>
             <ng-template #elseBlock>
                 <div class="product-price">
-                    ${{minPrice.toFixed(2)}}&ndash;${{maxPrice.toFixed(2)}}</div>
+                    AED{{minPrice.toFixed(2)}}&ndash;AED{{maxPrice.toFixed(2)}}</div>
             </ng-template>
         </ng-template>
     </ng-template>

@@ -52,31 +52,96 @@ export const menuData = [
               'Lorem Ipsum',
               'Cum dolores',
               'Lorem Ipsum',
+              'Cum dolores',
+              'Lorem Ipsum',
+              'Cum dolores',
+              'Lorem Ipsum',
+            ],
+          },
+          {
+            heading: 'Exclusive Deals',
+            items: [
+              'Discount on Laptops',
+              'Buy One Get One Free',
+              'Up to 50% Off',
+              'Flash Sale',
             ],
           },
           {
             heading: 'CRAS JUSTO ODIO',
-            items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
+            items: [
+              'Sunt dolorius',
+              'Cum dolores',
+              'Lorem Ipsum',
+              'Cum dolores',
+              'Lorem Ipsum',
+            ],
+          },
+          {
+            heading: 'Exclusive Deals',
+            items: [
+              'Discount on Laptops',
+              'Buy One Get One Free',
+              'Up to 50% Off',
+              'Flash Sale',
+            ],
           },
           {
             heading: 'CRAS JUSTO ODIO',
-            items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
+            items: [
+              'Sunt dolorius',
+              'Cum dolores',
+              'Lorem Ipsum',
+              'Cum dolores',
+              'Lorem Ipsum',
+            ],
+          },
+          {
+            heading: 'Exclusive Deals',
+            items: [
+              'Discount on Laptops',
+              'Buy One Get One Free',
+              'Up to 50% Off',
+              'Flash Sale',
+            ],
           },
           {
             heading: 'CRAS JUSTO ODIO',
-            items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
+            items: [
+              'Sunt dolorius',
+              'Cum dolores',
+              'Lorem Ipsum',
+              'Cum dolores',
+              'Lorem Ipsum',
+            ],
+          },
+          {
+            heading: 'Exclusive Deals',
+            items: [
+              'Discount on Laptops',
+              'Buy One Get One Free',
+              'Up to 50% Off',
+              'Flash Sale',
+            ],
           },
           {
             heading: 'CRAS JUSTO ODIO',
-            items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
+            items: [
+              'Sunt dolorius',
+              'Cum dolores',
+              'Lorem Ipsum',
+              'Cum dolores',
+              'Lorem Ipsum',
+            ],
           },
           {
-            heading: 'CRAS JUSTO ODIO',
-            items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
-          },
-          {
-            heading: 'CRAS JUSTO ODIO',
-            items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
+            heading: 'Exclusive Deals',
+            items: [
+              'Discount on Laptops',
+              'Buy One Get One Free',
+              'Up to 50% Off',
+              'Flash Sale',
+            ],
           },
         ],
       },
@@ -84,8 +149,25 @@ export const menuData = [
         name: 'Fresh Food',
         submenus: [
           {
-            heading: 'CRAS JUSTO ODIO',
-            items: ['Vegetables', 'Fruits', 'Dairy'],
+            heading: 'Vegetables & Fruits',
+            items: ['Carrots', 'Tomatoes', 'Bananas', 'Apples', 'Lettuce'],
+          },
+          {
+            heading: 'Dairy Products',
+            items: ['Milk', 'Cheese', 'Yogurt', 'Butter', 'Cream'],
+          },
+          {
+            heading: 'Meats & Poultry',
+            items: ['Chicken', 'Beef', 'Pork', 'Lamb', 'Turkey'],
+          },
+          {
+            heading: 'Frozen Foods',
+            items: [
+              'Ice Cream',
+              'Frozen Vegetables',
+              'Frozen Fruits',
+              'Frozen Meals',
+            ],
           },
         ],
       },
@@ -93,8 +175,16 @@ export const menuData = [
         name: 'Grocery',
         submenus: [
           {
-            heading: 'CRAS JUSTO ODIO',
-            items: ['Snacks', 'Beverages', 'Spices'],
+            heading: 'Snacks',
+            items: ['Chips', 'Cookies', 'Candies', 'Nuts', 'Granola Bars'],
+          },
+          {
+            heading: 'Beverages',
+            items: ['Juices', 'Sodas', 'Coffee', 'Tea', 'Water'],
+          },
+          {
+            heading: 'Spices',
+            items: ['Salt', 'Pepper', 'Cumin', 'Coriander', 'Chili Powder'],
           },
         ],
       },
@@ -102,8 +192,18 @@ export const menuData = [
         name: 'Grocery Non Food',
         submenus: [
           {
-            heading: 'CRAS JUSTO ODIO3',
-            items: ['Paper Goods', 'Cleaning Supplies', 'Personal Care'],
+            heading: 'Cleaning Supplies',
+            items: [
+              'Dish Soap',
+              'Laundry Detergent',
+              'Wipes',
+              'Bleach',
+              'Sponges',
+            ],
+          },
+          {
+            heading: 'Personal Care',
+            items: ['Shampoo', 'Toothpaste', 'Toothbrush', 'Soap', 'Deodorant'],
           },
         ],
       },
@@ -113,20 +213,27 @@ export const menuData = [
     title: 'Fresh Food',
     subcategories: [
       {
-        heading: 'CRAS JUSTO ODIO',
-        items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
-      },
-      {
-        heading: 'CRAS JUSTO ODIO',
-        items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
-      },
-      {
-        heading: 'CRAS JUSTO ODIO',
-        items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
-      },
-      {
-        heading: 'CRAS JUSTO ODIO',
-        items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
+        name: 'Fresh Produce',
+        submenus: [
+          {
+            heading: 'Vegetables',
+            items: ['Spinach', 'Kale', 'Potatoes', 'Onions', 'Cucumbers'],
+          },
+          {
+            heading: 'Fruits',
+            items: [
+              'Pineapple',
+              'Mangoes',
+              'Grapes',
+              'Peaches',
+              'Strawberries',
+            ],
+          },
+          {
+            heading: 'Dairy',
+            items: ['Milk', 'Butter', 'Yogurt', 'Cheese', 'Cream'],
+          },
+        ],
       },
     ],
   },
@@ -134,24 +241,194 @@ export const menuData = [
     title: 'Grocery',
     subcategories: [
       {
-        heading: 'CRAS JUSTO ODIO',
-        items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
-      },
-      {
-        heading: 'CRAS JUSTO ODIO',
-        items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
-      },
-      {
-        heading: 'CRAS JUSTO ODIO',
-        items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
-      },
-      {
-        heading: 'CRAS JUSTO ODIO',
-        items: ['Sunt dolorius', 'Cum dolores', 'Lorem Ipsum'],
+        name: 'Food Items',
+        submenus: [
+          {
+            heading: 'Canned Goods',
+            items: ['Tomatoes', 'Beans', 'Soup', 'Tuna', 'Corn'],
+          },
+          {
+            heading: 'Packaged Foods',
+            items: ['Instant Noodles', 'Pasta', 'Rice', 'Oats', 'Cereal'],
+          },
+          {
+            heading: 'Beverages',
+            items: ['Soda', 'Juice', 'Coffee', 'Tea', 'Energy Drinks'],
+          },
+        ],
       },
     ],
   },
-  { title: 'Electronics', subcategories: [] },
+  {
+    title: 'Electronics',
+    subcategories: [
+      {
+        name: 'Mobile Devices',
+        submenus: [
+          {
+            heading: 'Smartphones',
+            items: ['iPhone', 'Samsung Galaxy', 'Google Pixel', 'OnePlus'],
+          },
+          {
+            heading: 'Accessories',
+            items: ['Chargers', 'Cases', 'Earphones', 'Screen Protectors'],
+          },
+        ],
+      },
+      {
+        name: 'Computers',
+        submenus: [
+          {
+            heading: 'Laptops',
+            items: ['MacBook Pro', 'Dell XPS', 'HP Spectre', 'Lenovo ThinkPad'],
+          },
+          {
+            heading: 'Desktops',
+            items: ['iMac', 'HP Omen', 'Custom Built PCs'],
+          },
+          {
+            heading: 'Monitors',
+            items: ['Samsung Curved', 'LG Ultrawide', 'Dell 4K'],
+          },
+        ],
+      },
+      {
+        name: 'Home Appliances',
+        submenus: [
+          {
+            heading: 'Kitchen Appliances',
+            items: ['Blender', 'Microwave', 'Coffee Maker', 'Toaster'],
+          },
+          {
+            heading: 'Vacuum Cleaners',
+            items: ['Dyson', 'Shark', 'Bissell'],
+          },
+        ],
+      },
+      {
+        name: 'Wearables',
+        submenus: [
+          {
+            heading: 'Smartwatches',
+            items: ['Apple Watch', 'Fitbit', 'Garmin', 'Samsung Galaxy Watch'],
+          },
+          {
+            heading: 'Fitness Trackers',
+            items: ['Fitbit Charge', 'Garmin Vivosmart', 'Xiaomi Mi Band'],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Books',
+    subcategories: [
+      {
+        name: 'Fiction',
+        submenus: [
+          {
+            heading: 'Thrillers',
+            items: [
+              'Gone Girl',
+              'The Girl with the Dragon Tattoo',
+              'The Silent Patient',
+            ],
+          },
+          {
+            heading: 'Science Fiction',
+            items: [
+              'Dune',
+              "Ender's Game",
+              "The Hitchhiker's Guide to the Galaxy",
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Non-Fiction',
+        submenus: [
+          {
+            heading: 'Biographies',
+            items: ['Steve Jobs', 'Becoming', 'The Diary of a Young Girl'],
+          },
+          {
+            heading: 'Self-Help',
+            items: [
+              'The Power of Habit',
+              'Atomic Habits',
+              'The Subtle Art of Not Giving a F*ck',
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Furniture',
+    subcategories: [
+      {
+        name: 'Living Room',
+        submenus: [
+          {
+            heading: 'Sofas & Couches',
+            items: ['Leather Sofa', 'Fabric Sofa', 'Sectional Sofa'],
+          },
+          {
+            heading: 'Coffee Tables',
+            items: ['Wooden Tables', 'Glass Tables', 'Marble Tables'],
+          },
+        ],
+      },
+      {
+        name: 'Bedroom',
+        submenus: [
+          {
+            heading: 'Beds',
+            items: ['King Bed', 'Queen Bed', 'Bunk Bed', 'Day Bed'],
+          },
+          {
+            heading: 'Wardrobes',
+            items: [
+              'Wooden Wardrobe',
+              'Metal Wardrobe',
+              'Sliding Door Wardrobe',
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Toys & Games',
+    subcategories: [
+      {
+        name: 'Outdoor Toys',
+        submenus: [
+          {
+            heading: 'Bikes & Scooters',
+            items: ['Mountain Bike', 'BMX', 'Electric Scooters'],
+          },
+          {
+            heading: 'Playhouses',
+            items: ['Wooden Playhouse', 'Plastic Playhouse', 'Tent Playhouse'],
+          },
+        ],
+      },
+      {
+        name: 'Board Games',
+        submenus: [
+          {
+            heading: 'Classic Games',
+            items: ['Monopoly', 'Scrabble', 'Chess', 'Risk'],
+          },
+          {
+            heading: 'Strategy Games',
+            items: ['Catan', 'Ticket to Ride', 'Carcassonne'],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const serviceSlider = {

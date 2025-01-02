@@ -71,16 +71,16 @@ export class MegaMenuComponent {
   // Show categories on hover
   showCategory(category: string) {
     this.activeCategory = category;
-    console.log(this.activeCategory);
 
-    // if (category === 'All Categories') {
-    //   const allCategoriesMenu = this.menuData.find(
-    //     (menu) => menu.title === 'All Categories'
-    //   );
-    //   if (allCategoriesMenu && allCategoriesMenu.subcategories.length > 0) {
-    //     this.activeSubcategory = allCategoriesMenu.subcategories[0].name;
-    //   }
-    // }
+
+    if (category === 'All Categories') {
+      const allCategoriesMenu = this.menuData.find(
+        (menu) => menu.title === 'All Categories'
+      );
+      if (allCategoriesMenu && allCategoriesMenu.subcategories.length > 0) {
+        this.activeSubcategory = allCategoriesMenu.subcategories[0].name;
+      }
+    }
   }
 
   // Show subcategories on hover

@@ -1,90 +1,23 @@
-<div class="bg-white border-b border-gray-200">
-  <div class="container mx-auto relative">
-    <nav class="flex space-x-4 text-xl font-medium text-gray-600 py-4">
-      <a
-        href="#"
-        class="hover:text-blue-500"
-        (mouseenter)="onHover({ title: 'All Categories' })"
-      >
-        All Categories
-      </a>
-      <span class="text-gray-300">|</span>
-      <a href="/shop/sidebar/list" class="hover:text-blue-500">Shop List</a>
-      <span class="text-gray-300">|</span>
-      <a href="#" class="hover:text-blue-500">Grocery</a>
-      <span class="text-gray-300">|</span>
-      <a href="#" class="hover:text-blue-500">Grocery Non Food</a>
-      <span class="text-gray-300">|</span>
-      <a href="#" class="hover:text-blue-500">Housewares</a>
-      <span class="text-gray-300">|</span>
-      <a href="#" class="hover:text-blue-500">Stationary</a>
-      <span class="text-gray-300">|</span>
-      <a href="#" class="hover:text-blue-500">Electronics</a>
-    </nav>
 
-    <!-- Dropdown Grid Section -->
-    <div
-      class="absolute left-0 top-full bg-white shadow-lg w-full z-50"
-      *ngIf="hoveredSubCategories"
-      (mouseleave)="resetHover()"
-    >
-      <div class="grid grid-cols-12 h-full">
-        <!-- Category List -->
-        <div class="col-span-3 bg-gray-100 h-full">
-          <div
-            class="border-b border-gray-500 border-dashed px-5 py-3 cursor-pointer"
-            *ngFor="let category of categories"
-            (mouseenter)="onHover(category)"
-          >
-            <h1 class="text-black text-base font-medium">
-              {{ category.title }}
-            </h1>
-          </div>
-        </div>
-
-        <!-- Subcategories -->
-        <div class="col-span-9 px-6 py-4 grid grid-cols-3 gap-5 pb-7">
-          <div
-            class="flex flex-col gap-1"
-            *ngFor="let subCat of hoveredSubCategories"
-          >
-            <h1 class="text-black font-semibold text-lg">
-              {{ subCat.title }}
-            </h1>
-            <div
-              class="flex flex-col gap-1"
-              *ngFor="let sub of subCat.subCategory"
-            >
-              <h1 class="text-gray-400 text-base cursor-pointer font-medium">
-                {{ sub.title }}
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="bg-white shadow-md px-[5%]">
+<div class="bg-white shadow-md ">
   <!-- Top Navigation -->
-  <div class="flex items-center justify-between bg-white text-white relative">
-    <div class="flex items-center gap-6">
+  <div class="flex items-center justify-between bg-white text-white relative container">
+    <div class="flex items-center">
       <div
         *ngFor="let menu of menuData"
-        class="group px-6 py-3 "
+        class="group py-4 flex gap-3"
         (mouseenter)="showCategory(menu.title)"
         (mouseleave)="hideCategory()"
       >
         <!-- Parent Menu Item -->
-        <button class="font-medium underline-offset-[10px] hover:underline decoration-2 text-black decoration-blue-500">
+        <h3 class="font-medium underline-offset-[13px] mr-4 hover:underline decoration-2 text-gray-600 hover:text-gray-800 decoration-blue-500">
           {{ menu.title }}
-        </button>
+        </h3>
     
         <!-- Dropdown for 'All Categories' -->
         <div
           *ngIf="activeCategory === 'All Categories'"
-          class="absolute left-0 top-full hidden group-hover:block w-[1200px] min-h-[40rem] bg-gray-100 shadow-lg border rounded-md z-10"
+          class="absolute left-0 top-full hidden group-hover:block min-w-[1200px] w-full min-h-[50rem] bg-gray-100 shadow-lg border rounded-md z-10"
         >
           <div class="flex">
             <!-- Subcategories -->
@@ -102,9 +35,9 @@
             </div>
     
             <!-- Submenus -->
-            <div class="w-full p-5 flex bg-white h-[40rem]">
+            <div class="w-full p-5 flex bg-white h-[50rem]">
               <div *ngFor="let category of menu.subcategories">
-                <div *ngIf="activeSubcategory === category.name" class="flex flex-col h-[40rem] flex-wrap gap-5 text-black">
+                <div *ngIf="activeSubcategory === category.name" class="flex flex-col h-full flex-wrap gap-5 text-black">
                   <div *ngFor="let submenu of category.submenus" class="flex w-96 gap-4 h-fit">
                     <div>
                       <h3 class="font-bold text-gray-800 mb-1">{{ submenu.heading }}</h3>
@@ -124,11 +57,11 @@
         <!-- Dropdown for Other Items -->
         <div
           *ngIf="activeCategory !== 'All Categories'"
-          class="absolute left-0 top-full hidden group-hover:block w-[1200px] min-h-[40rem] bg-gray-100 shadow-lg border rounded-md z-10"
+          class="absolute left-0 top-full hidden group-hover:block min-w-[1200px] w-full min-h-[50rem] bg-white shadow-lg border rounded-md z-10"
         >
-        <div class="w-full p-4 flex bg-white h-[40rem]">
+        <div class="w-full p-4 flex  h-[50rem]">
           <div *ngFor="let category of menu.subcategories">
-            <div class="flex flex-col h-[40rem] flex-wrap gap-5 text-black">
+            <div class="flex flex-col h-[50rem] flex-wrap gap-5 text-black">
               <div *ngFor="let submenu of category.submenus" class="flex w-96 gap-4 h-fit">
                 <div>
                   <h3 class="font-bold text-gray-800 mb-1">{{ submenu.heading }}</h3>

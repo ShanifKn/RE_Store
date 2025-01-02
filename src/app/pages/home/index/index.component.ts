@@ -4,7 +4,13 @@ import { ModalService } from 'src/app/shared/services/modal.service';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { UtilsService } from 'src/app/shared/services/utils.service';
 
-import { introSlider, brandSlider, serviceSlider, bannerSlider } from '../data';
+import {
+  introSlider,
+  brandSlider,
+  serviceSlider,
+  bannerSlider,
+  TopCategory,
+} from '../data';
 import { products } from 'src/app/shared/dummy-data';
 
 @Component({
@@ -17,12 +23,57 @@ export class IndexComponent implements OnInit {
   posts = [];
   topProducts = [];
   featuredProducts = [];
+  topSellingProducts = [];
   loaded = false;
   introSlider = introSlider;
   brandSlider = brandSlider;
   serviceSlider = serviceSlider;
   bannerSlider = bannerSlider;
   categories = [];
+  topCategory = [];
+
+  // introSlider: any = {
+  //   loop: true,
+  //   margin: 10,
+  //   nav: true,
+  //   dots: true,
+  //   autoplay: true,
+  //   responsive: {
+  //     0: { items: 1 },
+  //     600: { items: 1 },
+  //     1000: { items: 1 },
+  //   },
+  // };
+
+  slides = [
+    {
+      backgroundImage: 'assets/images/home/intro-slider/1.jpg',
+      backgroundColor: '#2a323e',
+      contentPosition: 'intro-content intro-content-left',
+      saleText: 'Clearout Sale',
+      title: 'Only Organic<br />Large Box',
+      description: 'Sale 30% off',
+      link: '/shop/sidebar/list',
+    },
+    {
+      backgroundImage: 'assets/images/home/intro-slider/4.jpg',
+      backgroundColor: '#dd6584',
+      contentPosition: 'intro-content intro-content-right',
+      saleText: 'Clearout Sale',
+      title: 'Good For You<br />And The Planet',
+      description: 'Fast Shipping',
+      link: '/shop/sidebar/list',
+    },
+    {
+      backgroundImage: 'assets/images/home/intro-slider/2.jpg',
+      backgroundColor: '#dd6584',
+      contentPosition: 'intro-content intro-content-right',
+      saleText: 'Clearout Sale',
+      title: 'Good For You<br />And The Planet',
+      description: 'Fast Shipping',
+      link: '/shop/sidebar/list',
+    },
+  ];
 
   logos: { image: string; link: string }[] = [
     {
@@ -70,11 +121,15 @@ export class IndexComponent implements OnInit {
   ) {
     this.featuredProducts = products;
 
-    this.topProducts = products;
+    this.topProducts = products.slice().reverse();
+
+    this.topSellingProducts = products;
 
     this.loaded = true;
 
     console.log(this.featuredProducts);
+
+    this.topCategory = TopCategory;
 
     // this.apiService.fetchHomeData().subscribe((result) => {
     //   this.products = result.products;
@@ -105,7 +160,7 @@ export class IndexComponent implements OnInit {
       },
       {
         name: 'Seafood',
-        image: 'assets/images/home/categories/5.png',
+        image: 'assets/images/home/categories/5.jpg',
         count: 3,
       },
       {

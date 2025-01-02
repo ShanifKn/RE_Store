@@ -119,7 +119,7 @@
                                     <tbody>
                                         <tr class="summary-subtotal">
                                             <td>Subtotal:</td>
-                                            <td>${{ (cartService.priceTotal |
+                                            <td>AED {{ (cartService.priceTotal |
                                                 async).toFixed(2) }}
                                             </td>
                                         </tr>
@@ -142,7 +142,7 @@
                                                         Shipping</label>
                                                 </div>
                                             </td>
-                                            <td>$0.00</td>
+                                            <td>AED 0.00</td>
                                         </tr>
 
                                         <tr class="summary-shipping-row">
@@ -157,7 +157,7 @@
                                                         for="standart-shipping">Standard:</label>
                                                 </div>
                                             </td>
-                                            <td>$10.00</td>
+                                            <td>AED 10.00</td>
                                         </tr>
 
                                         <tr class="summary-shipping-row">
@@ -172,7 +172,7 @@
                                                         for="express-shipping">Express:</label>
                                                 </div>
                                             </td>
-                                            <td>$20.00</td>
+                                            <td>AED 20.00</td>
                                         </tr>
 
                                         <tr class="summary-shipping-estimate">
@@ -184,7 +184,7 @@
 
                                         <tr class="summary-total">
                                             <td>Total:</td>
-                                            <td>${{ ((cartService.priceTotal | async) +
+                                            <td>AED {{ ((cartService.priceTotal | async) +
                                                 shippingCost).toFixed(2) }}</td>
                                         </tr>
                                     </tbody>

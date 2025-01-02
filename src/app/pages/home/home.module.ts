@@ -10,6 +10,7 @@ import { IndexComponent } from './index/index.component';
 import { TrendyCollectionComponent } from './trendy-collection/trendy-collection.component';
 import { BlogCollectionComponent } from './blog-collection/blog-collection.component';
 import { RecommendCollectionComponent } from './recommend-collection/recommend-collection.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RecommendCollectionComponent } from './recommend-collection/recommend-c
     TrendyCollectionComponent,
     BlogCollectionComponent,
     RecommendCollectionComponent,
+    ProductListComponent,
   ],
 
   imports: [CommonModule, RouterModule, NgbModule, OwlModule, SharedModule],

@@ -5,7 +5,7 @@
             <i class="icon-shopping-cart"></i>
             <span class="cart-count">{{ cartService.qtyTotal | async }}</span>
         </div>
-        <span class="cart-txt font-weight-normal">${{ (cartService.priceTotal | async).toFixed(2) }}</span>
+        <span class="cart-txt font-weight-normal">AED {{ (cartService.priceTotal | async).toFixed(2) }}</span>
     </a>
 
     <div class="dropdown-menu dropdown-menu-right"
@@ -22,7 +22,7 @@
 
                         <span class="cart-product-info">
                             <span class="cart-product-qty">{{ product.qty }}</span>
-                            x ${{ product.sale_price ? product.sale_price.toFixed(2): product.price.toFixed(2) }}
+                            x AED {{ product.sale_price ? product.sale_price.toFixed(2): product.price.toFixed(2) }}
                         </span>
                     </div>
 
@@ -40,7 +40,7 @@
             <div class="dropdown-cart-total">
                 <span>Total</span>
 
-                <span class="cart-total-price">${{ (cartService.priceTotal | async).toFixed(2) }}</span>
+                <span class="cart-total-price">AED {{ (cartService.priceTotal | async).toFixed(2) }}</span>
             </div>
 
             <div class="dropdown-cart-action">

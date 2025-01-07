@@ -47,7 +47,7 @@ export class IndexComponent implements OnInit {
 
   slides = [
     {
-      backgroundImage: 'assets/images/home/intro-slider/1.jpg',
+      backgroundImage: 'assets/images/home/banners2/1.jpg',
       backgroundColor: '#2a323e',
       contentPosition: 'intro-content intro-content-left',
       saleText: 'Clearout Sale',
@@ -56,7 +56,7 @@ export class IndexComponent implements OnInit {
       link: '/shop/sidebar/list',
     },
     {
-      backgroundImage: 'assets/images/home/intro-slider/4.jpg',
+      backgroundImage: 'assets/images/home/banners2/4.jpg',
       backgroundColor: '#dd6584',
       contentPosition: 'intro-content intro-content-right',
       saleText: 'Clearout Sale',
@@ -65,7 +65,16 @@ export class IndexComponent implements OnInit {
       link: '/shop/sidebar/list',
     },
     {
-      backgroundImage: 'assets/images/home/intro-slider/2.jpg',
+      backgroundImage: 'assets/images/home/banners2/2.jpg',
+      backgroundColor: '#dd6584',
+      contentPosition: 'intro-content intro-content-right',
+      saleText: 'Clearout Sale',
+      title: 'Good For You<br />And The Planet',
+      description: 'Fast Shipping',
+      link: '/shop/sidebar/list',
+    },
+    {
+      backgroundImage: 'assets/images/home/banners2/3.jpg',
       backgroundColor: '#dd6584',
       contentPosition: 'intro-content intro-content-right',
       saleText: 'Clearout Sale',

@@ -86,39 +86,47 @@ export class IndexComponent implements OnInit {
 
   logos: { image: string; link: string }[] = [
     {
-      image: 'assets/images/home/logos/1.jpeg',
+      image: 'assets/images/home/logos/1.png',
       link: 'https://www.example1.com',
     },
     {
-      image: 'assets/images/home/logos/2.jpeg',
+      image: 'assets/images/home/logos/2.png',
       link: 'https://www.example2.com',
     },
     {
-      image: 'assets/images/home/logos/3.jpeg',
+      image: 'assets/images/home/logos/3.png',
       link: 'https://www.example3.com',
     },
     {
-      image: 'assets/images/home/logos/4.jpeg',
+      image: 'assets/images/home/logos/4.png',
       link: 'https://www.example4.com',
     },
     {
-      image: 'assets/images/home/logos/5.jpeg',
+      image: 'assets/images/home/logos/5.png',
       link: 'https://www.example5.com',
     },
     {
-      image: 'assets/images/home/logos/6.jpeg',
+      image: 'assets/images/home/logos/6.png',
       link: 'https://www.example6.com',
     },
     {
-      image: 'assets/images/home/logos/7.jpeg',
+      image: 'assets/images/home/logos/7.png',
       link: 'https://www.example4.com',
     },
     {
-      image: 'assets/images/home/logos/8.jpeg',
+      image: 'assets/images/home/logos/8.png',
       link: 'https://www.example5.com',
     },
     {
-      image: 'assets/images/home/logos/9.jpeg',
+      image: 'assets/images/home/logos/9.png',
+      link: 'https://www.example6.com',
+    },
+    {
+      image: 'assets/images/home/logos/10.png',
+      link: 'https://www.example5.com',
+    },
+    {
+      image: 'assets/images/home/logos/11.png',
       link: 'https://www.example6.com',
     },
   ];

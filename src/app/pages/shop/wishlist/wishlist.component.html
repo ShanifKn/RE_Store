@@ -62,27 +62,27 @@
                             <td class="price-col">
                                 <div class="product-price d-inline-block mb-0"
                                     *ngIf="!product.stock || product.stock == 0 else elseBlock">
-                                    <span class="out-price">${{ product.price.toFixed(2)
+                                    <span class="out-price">AED {{ product.price.toFixed(2)
                                         }}</span>
                                 </div>
 
                                 <ng-template #elseBlock>
                                     <div class="product-price d-inline-block mb-0"
                                         *ngIf="product.minPrice == product.maxPrice else elseBlock">
-                                        ${{ product.minPrice.toFixed(2) }}
+                                        AED {{ product.minPrice.toFixed(2) }}
                                     </div>
                                     <ng-template #elseBlock>
                                         <div class="product-price d-inline-block mb-0"
                                             *ngIf="product.variants.length == 0 else elseBlock">
-                                            <span class="new-price">${{
+                                            <span class="new-price">AED {{
                                                 product.minPrice.toFixed(2) }}</span>
-                                            <span class="old-price">${{
+                                            <span class="old-price">AED {{
                                                 product.maxPrice.toFixed(2) }}</span>
                                         </div>
                                         <ng-template #elseBlock>
                                             <div
                                                 class="product-price d-inline-block mb-0">
-                                                ${{product.minPrice.toFixed(2)}}&ndash;${{product.maxPrice.toFixed(2)}}
+                                                AED {{product.minPrice.toFixed(2)}}&ndash;AED {{product.maxPrice.toFixed(2)}}
                                             </div>
                                         </ng-template>
                                     </ng-template>

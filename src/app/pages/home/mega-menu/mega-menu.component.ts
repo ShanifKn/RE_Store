@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { menuData } from '../data';
 
 @Component({
   selector: 're-store-mega-menu',
@@ -9,57 +10,33 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./mega-menu.component.scss'],
 })
 export class MegaMenuComponent {
-  categories = [
-    { title: 'Offers' },
-    { title: 'Fresh Food' },
-    { title: 'Grocery' },
-    { title: 'Grocery Non Food' },
-    { title: 'Housewares' },
-    { title: 'Stationary' },
-    { title: 'Electronics' },
-    { title: 'Garden' },
-    { title: 'Camping' },
-  ];
+  menuData = menuData; // Imported menu data
+  activeCategory: string | null = null; // Tracks active category
+  activeSubcategory: string | null = null; // Tracks active subcategory
 
-  subCategories = [
-    {
-      title: 'Fresh Food',
-      subCategory: [
-        { title: 'Vegetables' },
-        { title: 'Fruits' },
-        { title: 'Meat' },
-      ],
-    },
-    {
-      title: 'Grocery',
-      subCategory: [
-        { title: 'Rice & Grains' },
-        { title: 'Spices' },
-        { title: 'Oil' },
-      ],
-    },
-    {
-      title: 'Electronics',
-      subCategory: [
-        { title: 'Mobile Phones' },
-        { title: 'Laptops' },
-        { title: 'Accessories' },
-      ],
-    },
-  ];
+  // Show categories on hover
+  showCategory(category: string) {
+    this.activeCategory = category;
 
-  hoveredSubCategories: any[] | null = null;
 
-  onHover(category: any) {
-    
-    const found = this.subCategories.find(
-      (subCategory) => subCategory.title === category.title
-    );
-
-    this.hoveredSubCategories = found ? [found] : null;
+    if (category === 'All Categories') {
+      const allCategoriesMenu = this.menuData.find(
+        (menu) => menu.title === 'All Categories'
+      );
+      if (allCategoriesMenu && allCategoriesMenu.subcategories.length > 0) {
+        this.activeSubcategory = allCategoriesMenu.subcategories[0].name;
+      }
+    }
   }
 
-  resetHover() {
-    this.hoveredSubCategories = null;
+  // Show subcategories on hover
+  showSubcategory(subcategory: string) {
+    this.activeSubcategory = subcategory;
+  }
+
+  // Hide menu on mouse leave
+  hideCategory() {
+    this.activeCategory = null;
+    this.activeSubcategory = null;
   }
 }
